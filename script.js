@@ -190,6 +190,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"height" : "85px",
 			"width" : "85px",
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+			"background-repeat" : "no-repeat",
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
