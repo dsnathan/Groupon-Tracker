@@ -14,16 +14,16 @@
      <!-- header links -->
       <div class="row header-links text-center">
         <div class="col-md-12 header-container">
-          <div class="col-md-3 tags"> 
+          <div class="col-xs-3 tags"> 
             <a href="https://www.groupon.co.za/"> HOME </a>
           </div>
-          <div class="col-md-3 tags">
+          <div class="col-xs-3 tags">
             <a href="https://www.groupon.co.za/browse/?context=local"> LOCAL </a>
           </div>
-          <div class="col-md-3 tags">
+          <div class="col-xs-3 tags">
             <a href="http://www.groupon.co.za/goods"> GOODS </a>
           </div>
-          <div class="col-md-3">
+          <div class="col-xs-3">
             <a href="https://www.groupon.co.za/getaways"> GETAWAYS </a>
           </div>
         </div>
@@ -32,29 +32,30 @@
 
     
     <!-- user imput -> mobile number & waybill number -->
-    <div class="col-md-6 col-md-offset-3 inputs text-center">
-      <br>  <br>  <br>  <br>
-      <h2 class="title">Enter Tracking Number</h2>
-      <form class="form-inline" role='form'>
-        <div class="form-group">
-        <label class="sr-only" for="text">Tracking number: </label>
-        <input class="inputInfo" type="text" class="form-control" ng-model="waybill" placeholder="PNJXXXXXXX">
-        </div>
-       <!--  <h2 class="title"> Enter Mobile Number</h2>
-        <input type="text"  ng-model="user.mobile" placeholder="XXXX XXX XXX"> -->
-<!--         <br> <br>    -->       
-        <button ng-click="trackOrder()" class='btn btn-default' class="caption_button">Track Order</button> 
-        <!-- <input id="submit" type="submit" ng-click="verify(user)" value="Submit"> -->
-        <div class="error" ng-show="findError"> Please enter the Tracking Number received through your order confirmation</div>
-      </form>
-    </div> 
-  </div>
+    <div class="mainbody">
+      <div class="col-md-6 col-md-offset-3 inputs text-center">
+        <br>  <br>  <br>  <br>
+        <h2 class="title">Enter Tracking Number</h2>
+        <form class="form-inline" role='form'>
+          <div class="form-group">
+          <label class="sr-only" for="text">Tracking number: </label>
+          <input class="inputInfo" type="text" class="form-control" ng-model="waybill" placeholder="PNJXXXXXXX">
+          </div>
+         <!--  <h2 class="title"> Enter Mobile Number</h2>
+          <input type="text"  ng-model="user.mobile" placeholder="XXXX XXX XXX"> -->
+  <!--         <br> <br>    -->       
+          <button ng-click="trackOrder()" class='btn btn-default' class="caption_button">Track Order</button> 
+          <!-- <input id="submit" type="submit" ng-click="verify(user)" value="Submit"> -->
+          <div class="error" ng-show="findError"> Please enter the Tracking Number received through your order confirmation</div>
+        </form>
+      </div> 
+    </div>
 
   <!-- footer -->
   <div class="footer_container">
     <div class="containerTwo">
       <div class="row footer-context">
-        <section class="content_1 col-md-2 block text-center">
+        <section class="content_1 col-xs-2 block text-center">
           <div class="title_block">
             <div class="title_block_name"> COMPANY </div>
           </div>
@@ -65,7 +66,7 @@
             <div class="press"> <a id="ls-footer-press" href="https://www.groupon.co.za/presse" data-bhw="FooterLinkPress" data-bhw-path="FooterSitemap|FooterLinkPress" style="font-size: 11px;">Press</a></div>
           </div>
         </section>
-        <section class="content_2 col-md-2 block text-center">
+        <section class="content_2 col-xs-2 block text-center">
           <div class="title_block">
             <div class="title_block_name"> WORK WITH GROUPON </div>
           </div>
@@ -74,7 +75,7 @@
             <div class="affiliateProgram"> <a id="ls-footer-affiliates" href="https://partner-int.groupon.com/login" data-bhw="FooterLinkAffiliates" data-bhw-path="FooterSitemap|FooterLinkAffiliates" style="font-size: 11px;">Affiliate Program</a> </div>
           </div>
         </section>
-        <section class="content_3 col-md-2 block text-center">
+        <section class="content_3 col-xs-2 block text-center">
           <div class="title_block"> 
             <div class="title_block_name"> MORE </div>
           </div>
@@ -83,7 +84,7 @@
             <div class="faq"> <a id="ls-footer-faq" href="https://www.groupon.co.za/faq" style="font-size: 11px;" data-bhw="FooterLinkFaq" data-bhw-path="FooterSitemap|FooterLinkFaq">FAQ</a> </div>
           </div>
         </section>
-        <section class="content_4 col-md-2 block text-center">
+        <section class="content_4 col-xs-2 block text-center">
           <div class="title_block">
             <div class="title_block_name"> FOLLOW US </div>
           </div>
@@ -98,14 +99,16 @@
             </p>
           </div>
         </section>
-        <section class="content_5 col-md-4 block text-center">
+        <section class="content_7 col-xs-4 block text-center">
           <div class="footer-content">
             <a href="https://www.groupon.co.za/mobile">
               <img src="https://www.grouponreturn.co.za/img/cms/Mobile.png" width="230" height="90">
             </a>
           </div>
         </section>
-        <section class="content_6 col-md-8 block">
+      </div>
+      <div class="row footer-context">
+        <section class="content_6 col-xs-8 block">
           <div class="title_block">
             <div class="title_block_name"> UNBEATABLE DEALS FOR LOCAL ADVENTURES </div>
           </div>
@@ -123,14 +126,13 @@
               <a id="ls-footer-massages-link" data-bhw="FooterGsmZALinkMassages" href="https://www.groupon.co.za/coupons/massage" data-bhw-path="FooterGSM|FooterGsmZALinkMassages" style="font-size: 11px;">massages</a>
               <span>,&nbsp;</span>
                 <a id="ls-footer-salons-link" data-bhw="FooterGsmZALinkSalons" href="https://www.groupon.co.za/coupons/salon" data-bhw-path="FooterGSM|FooterGsmZALinkSalons" style="font-size: 11px;">salons</a>
-              </span>
               <span>,&nbsp;</span>
               <a id="ls-footer-activities-link" data-bhw="FooterGsmZALinkActivities" href="https://www.groupon.co.za/coupons/things-to-do" data-bhw-path="FooterGSM|FooterGsmZALinkActivities" style="font-size: 11px;">things to do</a>
               <span style="font-size: 11px;">, and a whole lot more, in hundreds of cities across the world.</span>
             </p>
           </div>
         </section>
-        <section class="content_7 col-md-3 block text-center">
+        <section class="content_7 col-xs-4 block text-center">
           <div class="footer-content">
             <p>
               <a href="http://www.grouponworks.co.za/?utm_source=groupon.co.za_footer_links&amp;utm_medium=referral&amp;utm_campaign=ft_links" target="_blank">
@@ -142,7 +144,6 @@
       </div>
     </div>
   </div>
-</div>
 
 
 

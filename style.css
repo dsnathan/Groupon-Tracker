@@ -7,6 +7,7 @@ body{
 .header{
 	background-color: #222222;
 	height: 50px;
+	width: 100%;
 }
 
 .header-container{
@@ -33,6 +34,10 @@ body{
 }
 
 /*middle stuff*/
+.mainbody {
+	height: 1px;
+}
+
 .error{
 	margin-top: 10px; 
 	color: red;	
@@ -53,7 +58,7 @@ body{
 /*footer*/
 .footer_container{
 	width: 100%;
-	height: 220px;
+	height: 100%;
 	background-color: #222222;
 	margin-top: 400px;
 }
@@ -93,8 +98,7 @@ a:hover{
 }
 
 .content_6 {
-	margin-left: -160px;
-	margin-top: 25px;
+	text-align: center;
 }
 
 .content_6 a{
@@ -103,7 +107,7 @@ a:hover{
 
 .content_7{
 	margin-left: -3px;
-	margin-top: 5px;ste
+	margin-top: 5px;
 }
 
 /*for tracking page*/
@@ -191,10 +195,6 @@ a:hover{
 
 .hovering{
 	margin-left: 50px; 
-}
-
-.progress {
-	margin: 0px auto;
 }
 
 /*@media (max-width: 768px) {*/
