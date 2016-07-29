@@ -142,6 +142,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package processing
 	else if(trackStatus.status.description === "Waybill Imported") {//change the description later
 		$scope.secondStyle = {
+			// "background-image" : 'images/ordered_imageEDITED.png'
 			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px"
