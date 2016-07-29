@@ -186,7 +186,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package out for delivery
 	else if(trackStatus.status.description === "On Trip"){ //change later
 		$scope.sixthStyle = {
-			"background-color" : "blue",
+			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px",
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
