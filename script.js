@@ -142,6 +142,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package processing
 	else if(trackStatus.status.description === "Waybill Imported") {//change the description later
 		$scope.secondStyle = {
+			// "background-image" : 'images/ordered_imageEDITED.png'
 			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px"
@@ -188,7 +189,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-color" : "blue",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/ordered_imageEDITED_zpsksnjzprl.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
