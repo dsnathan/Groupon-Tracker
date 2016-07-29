@@ -193,9 +193,13 @@ a:hover{
 	margin-left: 50px; 
 }
 
-@media (max-width: 768px) {
+.progress {
+	margin: 0px auto;
+}
+
+/*@media (max-width: 768px) {*/
 	/*header*/
-	.header-links {
+/*	.header-links {
 		display: none;
 	}
 	.between {
@@ -221,14 +225,14 @@ a:hover{
 	}
 	.allHover {
 		display: none;
-	}
+	}*/
 	/*footer stuff*/
-	.footer_container, .footer_container_portal{
+/*	.footer_container, .footer_container_portal{
 		display: none;
 	}
 }
-
-@media (max-width: 1100px) and (min-width: 768px) {
+*/
+/*@media (max-width: 1100px) and (min-width: 768px) {
 	.between{
 		width: 70px; 
 		margin-bottom: 73px;
@@ -247,22 +251,22 @@ a:hover{
 		font-size: 25px;
 		margin-top: 12px; 
 	}
-}
+}*/
 
-@media (max-width: 1000px) {
+/*@media (max-width: 1000px) {*/
 	/*header*/
-	.header-links {
-		display: none;
-	}
-	/*footer links*/
-	.footer_container, .footer_container_portal{
+	/*.header-links {
+		display: none;*/
+	/*}
+*/	/*footer links*/
+/*	.footer_container, .footer_container_portal{
 		display: none;
 	}
 	.inputs{
 		margin-left: 20px; 
 	}
 }
-
+*/
 
 
 

@@ -3,12 +3,12 @@ var app = angular.module("GrouponTrackApp", ["ngRoute"]);
 //config
 app.config(function($routeProvider) {
 	$routeProvider.when("/", {
-		templateUrl: "/templates/home.html",
+		templateUrl: "templates/home.html",
 		controller: 'homeCtrl'
 	})
   //portal page
   $routeProvider.when("/portal",{
-  	templateUrl: "/templates/portal.html",
+  	templateUrl: "templates/portal.html",
   	controller: 'portalCtrl'
   })
 }); //end of config
@@ -156,7 +156,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//packing preparing to ship
 	else if(trackStatus.status.description === "On Manifest") {
 		$scope.thirdStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "blue",
 			"height" : "85px",
 			"width" : "85px"
 		}
@@ -185,9 +185,10 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package out for delivery
 	else if(trackStatus.status.description === "On Trip"){ //change later
 		$scope.sixthStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "blue",
 			"height" : "85px",
-			"width" : "85px"
+			"width" : "85px",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/ordered_imageEDITED_zpsksnjzprl.png)",
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
