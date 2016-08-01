@@ -145,7 +145,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			// "background-image" : 'images/ordered_imageEDITED.png'
 			"background-color" : "#48A431",
 			"height" : "85px",
-			"width" : "85px"
+			"width" : "85px",
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -157,9 +157,12 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//packing preparing to ship
 	else if(trackStatus.status.description === "On Manifest") {
 		$scope.thirdStyle = {
-			"background-color" : "blue",
+			"background-color" : "#6FB23E",
 			"height" : "85px",
-			"width" : "85px"
+			"width" : "85px",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingEDITED_zpsl1cf7dol.png)",
+			"background-repeat" : "no-repeat",
+			"background-position" : "center"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -173,7 +176,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.fourthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
-			"width" : "85px"
+			"width" : "85px",
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -191,6 +194,8 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"width" : "85px",
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
 			"background-repeat" : "no-repeat",
+			"background-position" : "center"
+
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -205,7 +210,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.fifthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
-			"width" : "85px"
+			"width" : "85px",
 		}
 		$scope.dateEst = "Package delivered";
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
