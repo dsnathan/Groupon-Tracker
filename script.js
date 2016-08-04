@@ -189,7 +189,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	}
 
 	//package out for delivery
-	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound" || trackStatus.events[9].description === "Waybill PNJ1925264 created in import"){ //change later
+	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound"){ //change later
 		$scope.sixthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
@@ -212,7 +212,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-color" : "#6FB23E",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingEDITED_zpsl1cf7dol.png)",
+			"background-image" : "images/deliveredEDITED.jpg",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center"
 		}
