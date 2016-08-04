@@ -164,8 +164,8 @@ a:hover{
 }
 
 .deliverydiv {
-	display: inline-block;
-}
+/*	display: inline-block;
+*/}
 
 .DeliveryInfo{
 	margin-left: 50px;
@@ -184,17 +184,17 @@ a:hover{
 }
 
 .allHover{
-	display: inline-block;
 	margin-right: 500px;
 	margin-top: 30px; 
 	font-size: 18px;
 	height: 20px;
 	color: #48A431;
-	float:right;
+	float: right;
+	display: inline-block;
 }
 
-.hovering{
-	margin-left: 50px; 
+.hovering{ 
+	margin: 0px auto;
 }
 
 /*@media (max-width: 768px) {*/

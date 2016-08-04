@@ -71,8 +71,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
   var day = trackStatus.estDeliveryEndDate.slice(6,8);
   var yearStamp = trackStatus.status.timeStamp.slice(0,4);
   var monthStamp = trackStatus.status.timeStamp.slice(4,6);
-  var dayStamp = trackStatus.status.timeStamp.slice(6,8);
-  
+  var dayStamp = trackStatus.status.timeStamp.slice(6,8);  
 
   //hovering effect 
   $scope.hover = function() {
@@ -172,11 +171,14 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.prepImage = false;
 	}
 	//package in transit
-	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing" || trackStatus.status.description === "Shipment Has Been Dispatched"){
+	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched"){
 		$scope.fourthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+			"background-repeat" : "no-repeat",
+			"background-position" : "center"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -187,7 +189,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	}
 
 	//package out for delivery
-	else if(trackStatus.status.description === "On Trip"){ //change later
+	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound" || trackStatus.events[9].description === "Waybill PNJ1925264 created in import"){ //change later
 		$scope.sixthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
@@ -195,7 +197,6 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center"
-
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -208,9 +209,12 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package delivered 
 	else if(trackStatus.status.description === "Pod Received" || trackStatus.status.description === "Delivered"){ 
 		$scope.fifthStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "#6FB23E",
 			"height" : "85px",
 			"width" : "85px",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingEDITED_zpsl1cf7dol.png)",
+			"background-repeat" : "no-repeat",
+			"background-position" : "center"
 		}
 		$scope.dateEst = "Package delivered";
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -219,19 +223,23 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.courierContact = trackStatus.contactNo;
 		$scope.deliverImage = false;
 	}
-	else {
-		$scope.thirdStyle = {
-			"background-color" : "#48A431",
-			"height" : "85px",
-			"width" : "85px"
-		}
-		$scope.dateEst = day + "/" + month + "/" + year;
-		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
-		$scope.trackingNum = trackStatus.trackingNo;
-		$scope.courierDetail= trackStatus.courier;
-		$scope.courierContact = trackStatus.contactNo;
-		$scope.prepImage = false;
-	}
+
+	// else {
+	// 	$scope.thirdStyle = {
+	// 		"background-color" : "#6FB23E",
+	// 		"height" : "85px",
+	// 		"width" : "85px",
+	// 		"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingEDITED_zpsl1cf7dol.png)",
+	// 		"background-repeat" : "no-repeat",
+	// 		"background-position" : "center"
+	// 	}
+	// 	$scope.dateEst = day + "/" + month + "/" + year;
+	// 	$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+	// 	$scope.trackingNum = trackStatus.trackingNo;
+	// 	$scope.courierDetail= trackStatus.courier;
+	// 	$scope.courierContact = trackStatus.contactNo;
+	// 	$scope.prepImage = false;
+	// }
 });
 
 
