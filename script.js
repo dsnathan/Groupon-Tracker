@@ -71,7 +71,9 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
   var day = trackStatus.estDeliveryEndDate.slice(6,8);
   var yearStamp = trackStatus.status.timeStamp.slice(0,4);
   var monthStamp = trackStatus.status.timeStamp.slice(4,6);
-  var dayStamp = trackStatus.status.timeStamp.slice(6,8);  
+  var dayStamp = trackStatus.status.timeStamp.slice(6,8);
+  var onDelivery = "Waybill PNJ1925264 created in import"
+  
 
   //hovering effect 
   $scope.hover = function() {
@@ -189,7 +191,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	}
 
 	//package out for delivery
-	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound" || trackStatus.events[9].description === "Waybill PNJ1925264 created in import"){ //change later
+	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound"){ //change later
 		$scope.sixthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
@@ -209,12 +211,13 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package delivered 
 	else if(trackStatus.status.description === "Pod Received" || trackStatus.status.description === "Delivered"){ 
 		$scope.fifthStyle = {
-			"background-color" : "#6FB23E",
+			"background-color" : "#5BBA1E",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingEDITED_zpsl1cf7dol.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/deliveredEDITED_zpsl9pi8ivt.jpg)",
 			"background-repeat" : "no-repeat",
-			"background-position" : "center"
+			"background-position" : "center",
+			"background-size" : "50%"
 		}
 		$scope.dateEst = "Package delivered";
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
