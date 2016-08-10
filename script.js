@@ -156,7 +156,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.processImage = false;
 	}
 	//packing preparing to ship
-	else if(trackStatus.status.description === "On Manifest") {
+	else if(trackStatus.status.description === "On Manifest" || trackStatus.status.description === "Parcel Arrived At Dawn Wing") {
 		$scope.thirdStyle = {
 			"background-color" : "#6FB23E",
 			"height" : "85px",
@@ -173,7 +173,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.prepImage = false;
 	}
 	//package in transit
-	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.events[9].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import"){
+	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot"){
 		$scope.fourthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",
@@ -191,7 +191,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	}
 
 	//package out for delivery
-	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound"){ //change later
+	else if(trackStatus.status.description === "On Trip" || trackStatus.status.description === "Inbound" || trackStatus.events[9].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import"){ //change later
 		$scope.sixthStyle = {
 			"background-color" : "#48A431",
 			"height" : "85px",

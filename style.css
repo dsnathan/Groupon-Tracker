@@ -54,6 +54,11 @@ body{
 	margin-right: 100px;
 }
 
+.isDisabled {
+	opacity: .5;
+	pointer-events: none;
+}
+
 
 /*footer*/
 .footer_container{
