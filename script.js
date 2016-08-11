@@ -175,12 +175,13 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package in transit
 	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound" || trackStatus.events[3].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import"){
 		$scope.fourthStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "#5EA630",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
 			"background-repeat" : "no-repeat",
-			"background-position" : "center"
+			"background-position" : "center",
+			"background-size" : "50%"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
