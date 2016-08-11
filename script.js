@@ -173,7 +173,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.prepImage = false;
 	}
 	//package in transit
-	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound" || trackStatus.events[3].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import"){
+	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound" || trackStatus.events[2].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import"){
 		$scope.fourthStyle = {
 			"background-color" : "#5EA630",
 			"height" : "85px",
