@@ -125,8 +125,14 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
   	$scope.deliverSoonText = false; 
   }
 
-	//package ordered-->this generates new images to display when that event is happening
+//courier: Fast n Furious has different callbacks
+	// if (trackStatus.courier === "Fast n Furious") {
+	// 	for (var i = Things.length - 1; i >= 0; i--) {
+	// 		Things[i]
+	// 	}
+	// }
 
+//package ordered-->this generates new images to display when that event is happening
 	if(trackStatus.status.description === "ordered") {
 		$scope.firstStyle = {
 			"background-color" : "#48A431",
@@ -141,12 +147,14 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.orderImage = false;
 	}
 	//package processing
-	else if(trackStatus.status.description === "Waybill Imported") {//change the description later
+	else if(trackStatus.status.description === "Waybill Imported" || trackStatus.events[3].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import" || trackStatus.status.description === "Imported waybill received in full") {//change the description later
 		$scope.secondStyle = {
-			// "background-image" : 'images/ordered_imageEDITED.png'
 			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px",
+			"background-image" : "url(http://i1042.photobucket.com/albums/b421/dnate/processingOrderNEWeDITED_zpszmjnpqw3.png)",
+			"background-repeat" : "no-repeat",
+			"background-position" : "center"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -173,12 +181,12 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 		$scope.prepImage = false;
 	}
 	//package in transit
-	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound" || trackStatus.events[2].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import"){
+	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound"){
 		$scope.fourthStyle = {
 			"background-color" : "#5EA630",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
 			"background-size" : "50%"
@@ -197,7 +205,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center"
 		}
