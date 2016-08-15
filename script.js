@@ -38,11 +38,13 @@ var URL = "http://stormy-reaches-65962.herokuapp.com/?url=https://www.parcelninj
 		if (trackStatus!== null && trackStatus.trackingNo === $scope.waybill) {
 			console.log(response.data);
 			$location.path("/portal");
+			$scope.isSending = true;
 		}
 		else {
 		// 	$scope.user.mobile="";
 			$scope.findError = true; 
 			$scope.waybill="";
+			$scope.isSending = false
 		}
 	});
  }
