@@ -182,6 +182,12 @@ a:hover{
 	margin-top: 18px; 
 }
 
+#paymentImage{
+	width: 63%;
+	height: auto;
+	margin-left: 10px;
+}
+
 #transitImage{
 	width: 50%;
 	height: auto;
@@ -192,6 +198,12 @@ a:hover{
 	height: auto;
 	margin-top: 22px;
 	margin-left: 2px;
+}
+
+#deliveryImage{
+	width: 60%;
+	height: auto;
+	margin-top: 20px;
 }
 
 .tick{

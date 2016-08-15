@@ -36,7 +36,7 @@
 
 		<div class="track text-center trackOne">
 			<div class="progress" ng-style="firstStyle" ng-mouseover="hover()" ng-mouseleave="hoverOver()">
-				<img class="images" ng-show="orderImage" src="/images/ordered_image.png"/>
+				<img class="images" id="paymentImage" ng-show="orderImage" src="http://i346.photobucket.com/albums/p427/Andrew_Kwik/paymentConfirmedNEW_zpsdmxqhkqn.png"/>
 			</div>
 			<div class="steps"> Payment Confirmed </div>	
 		</div>
@@ -59,23 +59,14 @@
 
 		<div class="track text-center">
 			<div class="progress" ng-style="fourthStyle" ng-mouseover="transitHover()" ng-mouseleave="transitHoverOver()">
-<<<<<<< HEAD
-				<img class="images" ng-show="transitImage" src="/images/transit.png"/>
-=======
-				<img class="images" id="transitImage" ng-show="transitImage" src="/images/transit.png"/>
->>>>>>> 38dbc79b8a35943a770ebf543ffccc4720d510bc
+				<img class="images" id="transitImage" ng-show="transitImage" src="http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20delivery_zpshvvz0sf1.png"/>
 			</div>
 			<div class="steps text-center"> In Transit  </div>
 		</div>
 		<div class="between"></div>
-
 		<div class="track text-center">
 			<div class="progress" ng-style="sixthStyle" ng-mouseover="outHover()" ng-mouseleave="outHoverOver()">
-<<<<<<< HEAD
-				<img class="images" id="transitImage" ng-show="outImage" src="http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20delivery_zpshvvz0sf1.png"/>
-=======
-				<img class="images" ng-show="outImage" src="http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20delivery_zpshvvz0sf1.png"/>
->>>>>>> 38dbc79b8a35943a770ebf543ffccc4720d510bc
+				<img class="images" id="deliveryImage" ng-show="outImage" src="/images/transit.png"/>
 			</div>
 			<div class="steps text-center"> Out for Delivery  </div>
 		</div>
