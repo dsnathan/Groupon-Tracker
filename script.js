@@ -72,7 +72,8 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
   var yearStamp = trackStatus.status.timeStamp.slice(0,4);
   var monthStamp = trackStatus.status.timeStamp.slice(4,6);
   var dayStamp = trackStatus.status.timeStamp.slice(6,8);
-  var onDelivery = "Waybill PNJ1925264 created in import"
+  var onDelivery = "Waybill PNJ1925264 created in import";
+  var deliveryEvents = trackStatus.events
   
 
   //hovering effect 
@@ -126,11 +127,28 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
   }
 
 //courier: Fast n Furious has different callbacks
-	// if (trackStatus.courier === "Fast n Furious") {
-	// 	for (var i = Things.length - 1; i >= 0; i--) {
-	// 		Things[i]
-	// 	}
-	// }
+	if (trackStatus.courier === "Fast n Furious") {
+		for (var i = 0; i < deliveryEvents.length; i++) {
+			//Fast n Furious package delivered
+			if (deliveryEvents[i].description.includes("delivered")) {
+				$scope.fifthStyle = {
+					"background-color" : "#5BBA1E",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/deliveredEDITED_zpsl9pi8ivt.jpg)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center",
+					"background-size" : "50%"
+				}
+				$scope.dateEst = "Package delivered";
+				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+				$scope.trackingNum = trackStatus.trackingNo;
+				$scope.courierDetail= trackStatus.courier;
+				$scope.courierContact = trackStatus.contactNo;
+				$scope.deliverImage = false;
+			}
+		}
+		}
 
 //package ordered-->this generates new images to display when that event is happening
 	if(trackStatus.status.description === "ordered") {
