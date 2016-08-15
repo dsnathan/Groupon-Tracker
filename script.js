@@ -183,7 +183,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package in transit
 	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound"){
 		$scope.fourthStyle = {
-			"background-color" : "#5EA630",
+			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px",
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
@@ -202,7 +202,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package out for delivery
 	else if(trackStatus.status.description === "On Trip"){ //change later
 		$scope.sixthStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "#5EA630",
 			"height" : "85px",
 			"width" : "85px",
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
