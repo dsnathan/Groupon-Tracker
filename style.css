@@ -55,7 +55,7 @@ body{
 }
 
 .isDisabled {
-	opacity: .7;
+	opacity: .4;
 	pointer-events: none;
 }
 
