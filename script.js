@@ -78,55 +78,55 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
   var deliveryEvents = trackStatus.events
   
 
-  //hovering effect 
-  $scope.hover = function() {
-  	$scope.orderedText = true;
-  }
-  $scope.hoverOver = function(){
-  	$scope.orderedText = false;
-  }
+  // //hovering effect 
+  // $scope.hover = function() {
+  // 	$scope.orderedText = true;
+  // }
+  // $scope.hoverOver = function(){
+  // 	$scope.orderedText = false;
+  // }
 
-  $scope.processHover = function(){
-  	$scope.processText = true;
-  }
-  $scope.processHoverOver = function(){
-  	$scope.processText = false;
-  }
+  // $scope.processHover = function(){
+  // 	$scope.processText = true;
+  // }
+  // $scope.processHoverOver = function(){
+  // 	$scope.processText = false;
+  // }
 
-  $scope.prepHover = function(){
-  	$scope.prepText = true;
-  }
-  $scope.prepHoverOver = function(){
-  	$scope.prepText = false;
-  }
+  // $scope.prepHover = function(){
+  // 	$scope.prepText = true;
+  // }
+  // $scope.prepHoverOver = function(){
+  // 	$scope.prepText = false;
+  // }
 
-  $scope.transitHover = function(){
-  	$scope.transitText = true;
-  }
-  $scope.transitHoverOver = function(){
-  	$scope.transitText = false;
-  }
+  // $scope.transitHover = function(){
+  // 	$scope.transitText = true;
+  // }
+  // $scope.transitHoverOver = function(){
+  // 	$scope.transitText = false;
+  // }
 
-  $scope.outHover = function(){
-  	$scope.outText = true;
-  }
-  $scope.outHoverOver = function(){
-  	$scope.outText = false;
-  }
+  // $scope.outHover = function(){
+  // 	$scope.outText = true;
+  // }
+  // $scope.outHoverOver = function(){
+  // 	$scope.outText = false;
+  // }
 
-  $scope.delHover = function(){
-  	if(trackStatus.status.description === "Pod Received" || trackStatus.status.description === "Delivered") {
-  		$scope.deliverText= true;
-	  	$scope.signedBy = trackStatus.signedBy;
-  	}
-  	else {
-  		$scope.deliverSoonText = true; 
-  	}
-  }
-  $scope.delHoverOver = function(){
-  	$scope.deliverText = false;
-  	$scope.deliverSoonText = false; 
-  }
+  // $scope.delHover = function(){
+  // 	if(trackStatus.status.description === "Pod Received" || trackStatus.status.description === "Delivered") {
+  // 		$scope.deliverText= true;
+	 //  	$scope.signedBy = trackStatus.signedBy;
+  // 	}
+  // 	else {
+  // 		$scope.deliverSoonText = true; 
+  // 	}
+  // }
+  // $scope.delHoverOver = function(){
+  // 	$scope.deliverText = false;
+  // 	$scope.deliverSoonText = false; 
+  // }
 
 //courier: Fast n Furious has different callbacks
 	if (trackStatus.courier === "Fast n Furious") {
@@ -255,7 +255,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	}
 
 	//package delivered 
-	else if(trackStatus.status.description === "Pod Received" || trackStatus.status.description === "Delivered"){ 
+	else if(trackStatus.status.description === "Pod Received" || trackStatus.status.description === "Delivered" || trackStatus.status.description === "POD Captured"){ 
 		$scope.fifthStyle = {
 			"background-color" : "#5BBA1E",
 			"height" : "85px",
