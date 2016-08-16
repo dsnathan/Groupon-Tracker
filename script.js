@@ -130,6 +130,76 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 //courier: Fast n Furious has different callbacks
 	if (trackStatus.courier === "Fast n Furious") {
 		for (var i = 0; i < deliveryEvents.length; i++) {
+			// Fast n Furious Processing
+			if (deliveryEvents[i].description.includes("created in import")) {
+				$scope.secondStyle = {
+					"background-color" : "#48A431",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingOrderNEWeDITED_zpslrgqwlne.png)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center",
+					"background-size" : "65%"
+				}
+				$scope.dateEst = day + "/" + month + "/" + year;
+				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+				$scope.trackingNum = trackStatus.trackingNo;
+				$scope.courierDetail= trackStatus.courier;
+				$scope.courierContact = trackStatus.contactNo;
+				$scope.processImage = false;
+			}
+			// Fast n Furious Preparing to Ship
+			if (deliveryEvents[i].description.includes("received in full") || deliveryEvents[i].description.includes("allocated to linehaul")) {
+				$scope.thirdStyle = {
+					"background-color" : "#6FB23E",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingEDITED_zpsl1cf7dol.png)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center"
+				}
+				$scope.dateEst = day + "/" + month + "/" + year;
+				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+				$scope.trackingNum = trackStatus.trackingNo;
+				$scope.courierDetail= trackStatus.courier;
+				$scope.courierContact = trackStatus.contactNo;
+				$scope.prepImage = false;
+			}
+			// Fast n Furious In Transit
+			if (deliveryEvents[i].description.includes("scanned onto linehaul") || deliveryEvents[i].description.includes("scanned into branch")) {
+				$scope.fourthStyle = {
+					"background-color" : "#53A318",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center",
+				}
+				$scope.dateEst = day + "/" + month + "/" + year;
+				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+				$scope.trackingNum = trackStatus.trackingNo;
+				$scope.courierDetail= trackStatus.courier;
+				$scope.courierContact = trackStatus.contactNo;
+				$scope.transitImage = false;
+			}
+			// Fast n Furious Out for Delivery
+			if (deliveryEvents[i].description.includes("allocated to delivery")) {
+				$scope.sixthStyle = {
+					"background-color" : "#66AA3B",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center",
+					"background-size" : "50%"
+				}
+				$scope.dateEst = day + "/" + month + "/" + year;
+				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+				$scope.trackingNum = trackStatus.trackingNo;
+				$scope.courierDetail= trackStatus.courier;
+				$scope.courierContact = trackStatus.contactNo;
+				$scope.outImage = false;
+			}
 			//Fast n Furious package delivered
 			if (deliveryEvents[i].description.includes("delivered")) {
 				$scope.fifthStyle = {
@@ -147,23 +217,6 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 				$scope.courierDetail= trackStatus.courier;
 				$scope.courierContact = trackStatus.contactNo;
 				$scope.deliverImage = false;
-			}
-			if (deliveryEvents[i].description.includes("allocated to delivery")) {
-				$scope.sixthStyle = {
-					"background-color" : "#5EA630",
-					"height" : "85px",
-					"width" : "85px",
-					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
-					"background-repeat" : "no-repeat",
-					"background-position" : "center",
-					"background-size" : "50%",
-				}
-				$scope.dateEst = day + "/" + month + "/" + year;
-				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
-				$scope.trackingNum = trackStatus.trackingNo;
-				$scope.courierDetail= trackStatus.courier;
-				$scope.courierContact = trackStatus.contactNo;
-				$scope.outImage = false;
 			}
 		}
 	}
@@ -220,10 +273,10 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package in transit
 	else if(trackStatus.status.description === "Parcel Has Left Dawn Wing"  || trackStatus.status.description === "Shipment Has Been Dispatched" || trackStatus.status.description === "Shipment Shipped From Depot" || trackStatus.status.description === "Shipment Received By Depot" || trackStatus.status.description === "Inbound"){
 		$scope.fourthStyle = {
-			"background-color" : "#5EA630",
+			"background-color" : "#53A318",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
 		}
