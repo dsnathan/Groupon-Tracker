@@ -14,7 +14,6 @@ app.config(function($routeProvider) {
 }); //end of config
 
 var trackStatus = {};
-
 //home page controller
 app.controller("homeCtrl", function($scope,$location,$http,$window){
 	$scope.findError= false;
@@ -189,9 +188,10 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-color" : "#48A431",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i1042.photobucket.com/albums/b421/dnate/processingOrderNEWeDITED_zpszmjnpqw3.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingOrderNEWeDITED_zpslrgqwlne.png)",
 			"background-repeat" : "no-repeat",
-			"background-position" : "center"
+			"background-position" : "center",
+			"background-size" : "65%"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
