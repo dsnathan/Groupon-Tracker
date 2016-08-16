@@ -14,6 +14,7 @@ app.config(function($routeProvider) {
 }); //end of config
 
 var trackStatus = {};
+
 //home page controller
 app.controller("homeCtrl", function($scope,$location,$http,$window){
 	$scope.findError= false;
