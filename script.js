@@ -150,10 +150,10 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			}
 			if (deliveryEvents[i].description.includes("allocated to delivery")) {
 				$scope.sixthStyle = {
-					"background-color" : "#53A318",
+					"background-color" : "#5EA630",
 					"height" : "85px",
 					"width" : "85px",
-					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
 					"background-repeat" : "no-repeat",
 					"background-position" : "center",
 					"background-size" : "50%",
@@ -237,10 +237,10 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package out for delivery
 	else if(trackStatus.status.description === "On Trip"){ //change later
 		$scope.sixthStyle = {
-			"background-color" : "#53A318",
+			"background-color" : "#66AA3B",
 			"height" : "85px",
 			"width" : "85px",
-			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
 			"background-size" : "50%"
