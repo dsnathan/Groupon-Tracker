@@ -186,12 +186,14 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	//package processing
 	else if(trackStatus.status.description === "Waybill Imported" || trackStatus.events[3].description === "Waybill" + " " + trackStatus.trackingNo + " " + "created in import" || trackStatus.status.description === "Imported waybill received in full" || trackStatus.status.description === "Acc Image Scanned In") {//change the description later
 		$scope.secondStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "#5CA824",
 			"height" : "85px",
 			"width" : "85px",
 			"background-image" : "url(http://i1042.photobucket.com/albums/b421/dnate/processingOrderNEWeDITED_zpszmjnpqw3.png)",
 			"background-repeat" : "no-repeat",
-			"background-position" : "center"
+			"background-position" : "center",
+			"background-size" : "65%",
+			"padding-top" : "25px"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -244,7 +246,8 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
-			"background-size" : "50%"
+			"background-size" : "48%",
+			"padding-bottom" : "25px"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
