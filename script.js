@@ -132,23 +132,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 	if (trackStatus.courier === "Fast n Furious") {
 		for (var i = 0; i < deliveryEvents.length; i++) {
 			//Fast n Furious package delivered
-			if (deliveryEvents[i].description.includes("allocated to delivery")) {
-				$scope.sixthStyle = {
-					"background-color" : "#53A318",
-					"height" : "85px",
-					"width" : "85px",
-					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
-					"background-repeat" : "no-repeat",
-					"background-position" : "center"
-				}
-				$scope.dateEst = day + "/" + month + "/" + year;
-				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
-				$scope.trackingNum = trackStatus.trackingNo;
-				$scope.courierDetail= trackStatus.courier;
-				$scope.courierContact = trackStatus.contactNo;
-				$scope.outImage = false;
-			}
-			if (deliveryEvents[i].description.includes("allocated to delivery") && deliveryEvents[i].description.includes("delivered")) {
+			if (deliveryEvents[i].description.includes("delivered")) {
 				$scope.fifthStyle = {
 					"background-color" : "#5BBA1E",
 					"height" : "85px",
@@ -164,6 +148,23 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 				$scope.courierDetail= trackStatus.courier;
 				$scope.courierContact = trackStatus.contactNo;
 				$scope.deliverImage = false;
+			}
+			if (deliveryEvents[i].description.includes("allocated to delivery")) {
+				$scope.sixthStyle = {
+					"background-color" : "#53A318",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/transitEDITED_zpsky4tfz9u.png)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center",
+					"background-size" : "50%",
+				}
+				$scope.dateEst = day + "/" + month + "/" + year;
+				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+				$scope.trackingNum = trackStatus.trackingNo;
+				$scope.courierDetail= trackStatus.courier;
+				$scope.courierContact = trackStatus.contactNo;
+				$scope.outImage = false;
 			}
 		}
 	}
