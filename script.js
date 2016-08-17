@@ -232,19 +232,23 @@ if (trackStatus.courier === "Fast n Furious") {
 	}
 
 //package ordered-->this generates new images to display when that event is happening
-if(trackStatus.status.description === "ordered") {
-	$scope.firstStyle = {
-		"background-color" : "#48A431",
-		"height" : "85px",
-		"width" : "85px"
-	}
-	$scope.dateEst = day + "/" + month + "/" + year;
-	$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
-	$scope.trackingNum = trackStatus.trackingNo;
-	$scope.courierDetail= trackStatus.courier;
-	$scope.courierContact = trackStatus.contactNo;
-	$scope.orderImage = false;
-}
+	if(trackStatus.status.description === "ordered") {
+		$scope.firstStyle = {
+			"background-color" : "#5CA824",
+			"height" : "85px",
+			"width" : "85px",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/paymentConfirmedNEWedited_zpsfikqiifs.png)",
+			"background-repeat" : "no-repeat",
+			"background-position" : "center",
+			"background-size" : "47%"
+		}
+		$scope.dateEst = day + "/" + month + "/" + year;
+		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
+		$scope.trackingNum = trackStatus.trackingNo;
+		$scope.courierDetail= trackStatus.courier;
+		$scope.courierContact = trackStatus.contactNo;
+		$scope.orderImage = false;
+
 	//package processing
 	else if(trackStatus.status.description === "Waybill Imported" || trackStatus.status.description === "Imported waybill received in full" || trackStatus.status.description === "Acc Image Scanned In") {//change the description later
 		$scope.secondStyle = {

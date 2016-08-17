@@ -228,19 +228,32 @@ a:hover{
 }
 
 @media (max-width: 320px) {
+<<<<<<< HEAD
 	.footer_container{
 		display: none;
 	}
 	.header-container{
+=======
+	.footer_container_portal{
+>>>>>>> c4a4d4bf4810d10fb2a10be5b657932868b6c07c
 		display: none;
 	}
 	.navbar-header{
 		display: none;
 	}
+<<<<<<< HEAD
 	.trackerLogo{
 		text-align: center;
 	}
 }
+=======
+	.header-container{
+		display: none;
+	}
+}
+
+
+>>>>>>> c4a4d4bf4810d10fb2a10be5b657932868b6c07c
 
 
 
