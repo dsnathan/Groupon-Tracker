@@ -208,6 +208,16 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 					"background-position" : "center",
 					"background-size" : "65%"
 				}
+				$scope.firstStyle = {
+					"background-color" : "#5CA824",
+					"height" : "85px",
+					"width" : "85px",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/paymentConfirmedNEWedited_zpsfikqiifs.png)",
+					"background-repeat" : "no-repeat",
+					"background-position" : "center",
+					"background-size" : "47%"
+				}
+
 				$scope.dateEst = day + "/" + month + "/" + year;
 				$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
 				$scope.trackingNum = trackStatus.trackingNo;
