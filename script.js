@@ -241,7 +241,8 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/processingOrderNEWeDITED_zps0qgxxpus.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
-			"background-size" : "65%"
+			"background-size" : "65%",
+			"padding-top" : "25px"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -294,7 +295,8 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/out%20for%20deliveryEDITED_zpsvkgeoc89.png)",
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
-			"background-size" : "50%"
+			"background-size" : "48%",
+			"padding-bottom" : "25px"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
