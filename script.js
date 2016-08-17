@@ -209,13 +209,13 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 					"background-size" : "65%"
 				}
 				$scope.firstStyle = {
-					"background-color" : "#48A431",
+					"background-color" : "#5CA824",
 					"height" : "85px",
 					"width" : "85px",
-					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/paymentConfirmedNEWedited_zpsfs0xxlt0.png)",
+					"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/paymentConfirmedNEWedited_zpsfikqiifs.png)",
 					"background-repeat" : "no-repeat",
 					"background-position" : "center",
-					"background-size" : "65%"
+					"background-size" : "47%"
 				}
 
 				$scope.dateEst = day + "/" + month + "/" + year;
