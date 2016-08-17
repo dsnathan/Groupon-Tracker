@@ -252,7 +252,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
 			"background-size" : "65%",
-			"padding-top" : "25px"
+			"padding-top" : "50px"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
@@ -306,7 +306,7 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 			"background-repeat" : "no-repeat",
 			"background-position" : "center",
 			"background-size" : "48%",
-			"padding-bottom" : "25px"
+			"padding-bottom" : "50px"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
