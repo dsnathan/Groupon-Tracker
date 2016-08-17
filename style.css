@@ -227,9 +227,20 @@ a:hover{
 	margin-left: 50px; 
 }
 
-
-
-
+@media (max-width: 320px) {
+	.footer_container{
+		display: none;
+	}
+	.header-container{
+		display: none;
+	}
+	.navbar-header{
+		display: none;
+	}
+	.trackerLogo{
+		text-align: center;
+	}
+}
 
 
 
