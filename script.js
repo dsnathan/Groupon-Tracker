@@ -231,9 +231,13 @@ app.controller("portalCtrl", function($scope,$location,$http,$window){
 //package ordered-->this generates new images to display when that event is happening
 	if(trackStatus.status.description === "ordered") {
 		$scope.firstStyle = {
-			"background-color" : "#48A431",
+			"background-color" : "#5CA824",
 			"height" : "85px",
-			"width" : "85px"
+			"width" : "85px",
+			"background-image" : "url(http://i346.photobucket.com/albums/p427/Andrew_Kwik/paymentConfirmedNEWedited_zpsfikqiifs.png)",
+			"background-repeat" : "no-repeat",
+			"background-position" : "center",
+			"background-size" : "47%"
 		}
 		$scope.dateEst = day + "/" + month + "/" + year;
 		$scope.currentTimeStamp = dayStamp + "/" + monthStamp + "/" + yearStamp;
